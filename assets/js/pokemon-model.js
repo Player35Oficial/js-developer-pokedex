@@ -3,5 +3,9 @@ class Pokemon {
     name;
     type;
     types = [];
-    photo
+    photo;
+    stats = {
+        "hp": this.hp,
+        "attack": this.attack
+    }
 }
