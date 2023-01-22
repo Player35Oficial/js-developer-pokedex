@@ -1,6 +1,6 @@
 const ol = document.getElementById('pokemonList')
 const offset = 0
-const limit = 10
+const limit = 1
 
 
 function convertPokemonToLi(pokemon) {
@@ -14,9 +14,14 @@ function convertPokemonToLi(pokemon) {
                 ${pokemon.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
             </ol>
 
+            
             <img src="${pokemon.photo}"
-                alt="${pokemon.name}">
+            alt="${pokemon.name}">
         </div>
+        <ol class="detail_status">
+            <li> HP <progress value="${pokemon.stats.hp}" max="100">${pokemon.stats.hp}</progress> ${pokemon.stats.hp} </li>
+            <li> Ataque <progress value="${pokemon.stats.attack}" max="100">${pokemon.stats.attack}</progress> ${pokemon.stats.attack} </li>
+        </ol>
     </li>
     `
 }
